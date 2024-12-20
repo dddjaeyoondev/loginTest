@@ -14,7 +14,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- 제목 -->
         <TextView
             android:id="@+id/post_title"
             android:layout_width="wrap_content"
@@ -23,16 +22,14 @@
             android:textColor="@android:color/black"
             android:textSize="30sp"
             android:text="Post Title"
-            android:paddingBottom="8dp"/>
+            android:paddingBottom="8dp" />
 
-        <!-- 구분선 -->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/black"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp" />
 
-        <!-- 본문 -->
         <TextView
             android:id="@+id/post_body"
             android:layout_width="wrap_content"
@@ -40,36 +37,33 @@
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:paddingTop="4dp"
-            android:text="Post Body"/>
+            android:text="Post Body" />
 
-        <!-- 버튼 레이아웃 -->
+        <!-- 좋아요 버튼 및 카운터 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="16dp"
-            android:gravity="end">
+            android:gravity="end"
+            android:layout_marginTop="8dp">
 
-            <!-- 좋아요 버튼 -->
-<!--            <ImageButton-->
-<!--                android:id="@+id/btn_like"-->
-<!--                android:layout_width="40dp"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:src="@drawable/ic_likeit"-->
-<!--                android:contentDescription="Like Button"-->
-<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
-<!--                android:padding="8dp"/>-->
+            <TextView
+                android:id="@+id/like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Likes"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp" />
 
-<!--            &lt;!&ndash; 댓글 버튼 &ndash;&gt;-->
-<!--            <ImageButton-->
-<!--                android:id="@+id/btn_reply"-->
-<!--                android:layout_width="40dp"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:src="@drawable/ic_comment"-->
-<!--                android:contentDescription="Reply Button"-->
-<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
-<!--                android:padding="8dp"-->
-<!--                android:layout_marginStart="8dp"/>-->
+            <ImageButton
+                android:id="@+id/like_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/ic_like"
+                android:contentDescription="Like Button" />
         </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
