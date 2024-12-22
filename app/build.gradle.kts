@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("com.google.gms.google-services")
+    kotlin("kapt") // 이 줄을 추가하세요.
 }
 
 dependencies {
@@ -11,7 +12,25 @@ dependencies {
     implementation ("com.google.firebase:firebase-storage")
     implementation ("com.google.firebase:firebase-firestore:24.7.0")
     implementation ("com.google.firebase:firebase-firestore:24.7.0")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    implementation(libs.androidx.material3.android)
+    implementation(libs.firebase.database.ktx)
+    implementation(libs.androidx.databinding.runtime)
+    kapt("com.github.bumptech.glide:compiler:4.15.1")
+
+    implementation(libs.androidx.ui.android)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.firestore.ktx)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }
+
 
 android {
     namespace = "com.Refee.RefeeDB"
@@ -43,18 +62,4 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-}
-
-dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.auth.ktx)
-    implementation(libs.firebase.firestore.ktx)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }
